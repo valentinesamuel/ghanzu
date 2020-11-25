@@ -1,0 +1,52 @@
+.hero-section {
+  position: relative;
+}
+
+.navbar-brand,
+.nav-item,
+.nav-link {
+  z-index: 2;
+  color: azure;
+}
+
+.jumbotron {
+  text-align: center;
+  position: relative;
+  height: 90vh;
+  width: auto;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+  z-index: 2;
+}
+
+.image {
+  object-fit: cover;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(253, 251, 251);
+  left: 50%;
+  margin-left: 0px;
+  transform: translate(-50%, -50%);
+}
+
+.lead {
+  line-height: 2;
+}
+
+.overlay {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  /* visibility: hidden; */
+  background-color: rgba(0, 0, 0, 0.596);
+  height: 100%;
+}
