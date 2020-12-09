@@ -29,7 +29,7 @@
 @media screen and (max-width: 600px) {
   .testimonials {
     margin-top: 40px;
-    background-color: transparent;
+    /* background-color: green; */
     /* padding: 5px; */
   }
   .box {
