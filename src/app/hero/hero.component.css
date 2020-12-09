@@ -7,6 +7,9 @@
   top: 0px;
   width: 100%;
 }
+.image {
+  filter: brightness(60%);
+}
 
 .main-text {
   margin-top: 25vh;
