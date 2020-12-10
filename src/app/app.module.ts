@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { HeroComponent } from './hero/hero.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { ServiceComponent } from './service/service.component';
 
 @NgModule({
-  declarations: [AppComponent, HeroComponent],
+  declarations: [AppComponent, HeroComponent, ServiceComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
