@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { TrialService } from '../trial.service';
 
 @Component({
   selector: 'app-hero',
@@ -6,15 +7,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./hero.component.css'],
 })
 export class HeroComponent implements OnInit {
-  constructor() {}
-
+  root: string = 'Hero Component';
   ngOnInit(): void {}
-
-  @Output() touch = new EventEmitter();
+  constructor(private trialService: TrialService) {}
 
   onTouch() {
-    this.touch.emit(
-      alert('This is direct from the hero to know how i can pass data')
-    );
+    this.trialService.Touched(this.root);
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TrialService } from '../trial.service';
 
 @Component({
   selector: 'app-service',
@@ -6,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./service.component.css'],
 })
 export class ServiceComponent implements OnInit {
-  constructor() {}
+  origin: string = 'Service Component';
+  constructor(private trialService: TrialService) {}
 
   ngOnInit(): void {}
+ 
+ 
+  onClicked() {
+    this.trialService.Touched(this.origin);
+  }
 }
