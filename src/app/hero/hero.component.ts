@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { TrialService } from '../trial.service';
+import { TrialService } from '../shared/trial.service';
 
 @Component({
   selector: 'app-hero',
