@@ -1,0 +1,18 @@
+<!-- Change the colored divs to actual testimonial cards and remove the irrelevant console logsz -->
+
+<button class="btn btn-primary" (click)="checker()">Test ME</button>
+
+<div [ngSwitch]="switchController">
+  <div *ngSwitchCase="1">
+    <div style="background-color: pink; height: 400px; width: 100%"></div>
+  </div>
+  <div *ngSwitchCase="2">
+    <div style="background-color: green; height: 400px; width: 100%"></div>
+  </div>
+  <div *ngSwitchCase="3">
+    <div style="background-color: blue; height: 400px; width: 100%"></div>
+  </div>
+  <div *ngSwitchDefault>
+    <div style="background-color: red; height: 400px; width: 100%"></div>
+  </div>
+</div>

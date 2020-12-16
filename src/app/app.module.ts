@@ -7,9 +7,15 @@ import { HeroComponent } from './hero/hero.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { ServiceComponent } from './service/service.component';
+import { TestimonialComponent } from './testimonial/testimonial.component';
 
 @NgModule({
-  declarations: [AppComponent, HeroComponent, ServiceComponent],
+  declarations: [
+    AppComponent,
+    HeroComponent,
+    ServiceComponent,
+    TestimonialComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
