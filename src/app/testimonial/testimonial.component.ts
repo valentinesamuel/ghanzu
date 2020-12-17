@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Testimonial } from './testimonial.modal';
+import { TestimonialService } from './testimonial.service';
 
 @Component({
   selector: 'app-testimonial',
   templateUrl: './testimonial.component.html',
   styleUrls: ['./testimonial.component.css'],
 })
-export class TestimonialComponent {
+export class TestimonialComponent implements OnInit {
   switchController: number = 0;
-
+  testimonials: Testimonial[];
   checker() {
     if (this.switchController < 3) {
       this.switchController++;
@@ -17,5 +19,11 @@ export class TestimonialComponent {
     } else {
       console.log('It made it to the false block');
     }
+  }
+
+  constructor(private testimonialService: TestimonialService) {}
+
+  ngOnInit() {
+    this.testimonials = this.testimonialService.getTestimonial();
   }
 }

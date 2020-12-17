@@ -16,3 +16,33 @@
     <div style="background-color: red; height: 400px; width: 100%"></div>
   </div>
 </div>
+
+<div class="container-fluid">
+  <div class="row testimonial">
+    <div
+      class="px-5 pt-4 cardd col-lg-3"
+      *ngFor="let testimonies of testimonials"
+    >
+      <img
+        [src]="testimonies.imagePath"
+        alt="Avatar"
+        height="100px"
+        width="100px"
+        style="border-radius: 50%; object-fit: cover"
+      />
+      <div>
+        <h3>
+          {{ testimonies.name }}
+        </h3>
+      </div>
+
+      <h4>
+        {{ testimonies.occupation }}
+      </h4>
+
+      <p>
+        {{ testimonies.description }}
+      </p>
+    </div>
+  </div>
+</div>

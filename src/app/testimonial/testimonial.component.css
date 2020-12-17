@@ -5,3 +5,37 @@
 div {
   display: block;
 }
+
+.testimonial {
+  /* width: 400px; */
+  background-color: #295c7a;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: start;
+}
+
+.cardd {
+  background-color: white;
+  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.1);
+}
+/* top:    10px margin */
+/* right:  3px margin  */
+/* bottom: 30px margin */
+/* left:   5px margin  */
+
+@media only screen and (max-width: 990px) {
+  .service-card {
+    text-align: center;
+    padding-right: 0px;
+  }
+
+  .cardd {
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+    margin: 12px;
+    margin-bottom: 30px;
+    padding: 3px;
+  }
+}
