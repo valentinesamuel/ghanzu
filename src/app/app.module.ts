@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { ServiceComponent } from './service/service.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
+import { ConsultationComponent } from './consultation/consultation.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
     HeroComponent,
     ServiceComponent,
     TestimonialComponent,
+    ConsultationComponent,
   ],
   imports: [
     BrowserModule,
