@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ServiceComponent } from './service/service.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { ConsultationComponent } from './consultation/consultation.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ConsultationComponent } from './consultation/consultation.component';
     ServiceComponent,
     TestimonialComponent,
     ConsultationComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
