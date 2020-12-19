@@ -5,6 +5,7 @@
 .navigation-hero {
   position: absolute;
   top: 0px;
+
   width: 100%;
 }
 .image {
@@ -41,10 +42,8 @@
   }
 }
 
-  @media only screen and (max-width: 990px) {
+@media only screen and (max-width: 990px) {
   .service-card {
     text-align: center;
-   
   }
-  
 }
