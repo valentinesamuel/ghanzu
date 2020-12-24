@@ -11,8 +11,7 @@ export class ServiceComponent implements OnInit {
   constructor(private trialService: TrialService) {}
 
   ngOnInit(): void {}
- 
- 
+
   onClicked() {
     this.trialService.Touched(this.origin);
   }
