@@ -12,6 +12,12 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
 import { ConsultationComponent } from './consultation/consultation.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppointmentComponent } from './appointment/appointment.component';
+import { Routes, RouterModule } from '@angular/router';
+import { AppointmentGuard } from './appointment.guard';
+
+const appRoutes: Routes = [
+{path:"appointment/:email/:password/:dept/:time", component: AppointmentComponent, canActivate:[AppointmentGuard]},
+]
 
 @NgModule({
   declarations: [
@@ -22,6 +28,7 @@ import { AppointmentComponent } from './appointment/appointment.component';
     ConsultationComponent,
     FooterComponent,
     AppointmentComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -29,8 +36,9 @@ import { AppointmentComponent } from './appointment/appointment.component';
     BrowserAnimationsModule,
     MatIconModule,
     FormsModule,
+    RouterModule.forRoot(appRoutes),
   ],
-  exports: [MatIconModule],
+  exports: [MatIconModule, RouterModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { SetAppointmentService } from '../set-appointment.service';
 
 @Component({
   selector: 'app-consultation',
@@ -6,15 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./consultation.component.css'],
 })
 export class ConsultationComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-
   clientEmail = '';
   clientPassword = '';
   clientDepartment = '';
   clientTime = '';
+  buttonStatus = false;
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private appointmentService: SetAppointmentService
+  ) {}
 
+  ngOnInit(): void {}
   //get the selected data from the select options
   departmentSelector(event: any) {
     this.clientDepartment = event.target.value;
@@ -23,21 +28,34 @@ export class ConsultationComponent implements OnInit {
     this.clientTime = event.target.value;
   }
 
-  //log all user details to the console
   submitter() {
-    console.log(this.clientEmail);
-    console.log(this.clientPassword);
-    console.log(this.clientDepartment);
-    console.log(this.clientTime);
+    console.log('data has left consultation component');
+
+    this.router.navigate(
+      [
+        'appointment',
+        this.clientEmail,
+        this.clientPassword,
+        this.clientDepartment,
+        this.clientTime,
+      ],
+      {
+        relativeTo: this.route,
+      }
+    );
+  }
+
+  onLogout() {
+    this.appointmentService.LogOut();
+  }
+
+  onLogIn() {
+    this.appointmentService.LogIn();
   }
 
   //
 }
 
-// todo: Setup  routes
-// todo: set up query parameters
-// todo: pass the parameters through the routes
-// !Get the parameters from the route to the page
-// !Display them in the details page
+//  Setup  routes
 // ? Create wildCard routes
 //

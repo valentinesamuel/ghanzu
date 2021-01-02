@@ -40,6 +40,9 @@
         <!-- Forms Start Here -->
 
         <form>
+          <button class="btn btn-success" (click)="onLogIn()">Log In</button>
+          <button class="btn btn-danger" (click)="onLogout()">Log Out</button>
+
           <h2 class="mt-5 mb-4">Request a Free Consultation</h2>
           <div class="form-row">
             <div class="form-group col-md-12">
@@ -97,13 +100,18 @@
               </select>
             </div>
           </div>
-          <button
-            type="button"
-            (click)="submitter()"
-            class="btn mt-5 btn-primary btn-lg btn-block"
+          <a rel="noopener noreferrer">
+            <button
+              type="button"
+              (click)="submitter()"
+              class="btn mt-5 btn-primary btn-lg btn-block"
+              [disabled]="buttonStatus"
+            >
+              Book Free Consultation
+            </button></a
           >
-            Book Free Consultation
-          </button>
+
+          <router-outlet></router-outlet>
         </form>
         <!-- Forms End Here -->
       </div>
@@ -111,5 +119,3 @@
   </div>
 </div>
 <!-- Forms -->
-
-
