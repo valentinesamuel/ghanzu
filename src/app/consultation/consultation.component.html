@@ -40,22 +40,41 @@
         <!-- Forms Start Here -->
 
         <form>
+          <button class="btn btn-success" (click)="onLogIn()">Log In</button>
+          <button class="btn btn-danger" (click)="onLogout()">Log Out</button>
+
           <h2 class="mt-5 mb-4">Request a Free Consultation</h2>
           <div class="form-row">
             <div class="form-group col-md-12">
               <label for="inputEmail4">Email</label>
-              <input type="email" class="form-control" id="inputEmail4" autocomplete="username"/>
+              <input
+                [(ngModel)]="clientEmail"
+                type="email"
+                class="form-control"
+                id="inputEmail4"
+                autocomplete="username"
+                [ngModelOptions]="{ standalone: true }"
+              />
             </div>
             <div class="form-group col-md-12">
               <label for="inputPassword4">Password</label>
-              <input type="password" class="form-control" id="inputPassword4" autocomplete="current-password"/>
+              <input
+                type="password"
+                class="form-control"
+                id="inputPassword4"
+                autocomplete="current-password"
+              />
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group col-md-12">
               <label for="inputState">Department</label>
-              <select id="inputStateDepartment" class="form-control">
+              <select
+                (change)="departmentSelector($event)"
+                id="inputStateDepartment"
+                class="form-control"
+              >
                 <option selected>Choose...</option>
                 <option>Criminal Law</option>
                 <option>Family Law</option>
@@ -68,7 +87,11 @@
           <div class="form-row">
             <div class="form-group col-md-12">
               <label for="inputState">Time</label>
-              <select id="inputStateTime" class="form-control">
+              <select
+                (change)="timeSelector($event)"
+                id="inputStateTime"
+                class="form-control"
+              >
                 <option selected>Choose...</option>
                 <option>8am</option>
                 <option>11am</option>
@@ -77,9 +100,18 @@
               </select>
             </div>
           </div>
-          <button type="button" class="btn mt-5 btn-primary btn-lg btn-block">
-            Book Free Consultation
-          </button>
+          <a rel="noopener noreferrer">
+            <button
+              type="button"
+              (click)="submitter()"
+              class="btn mt-5 btn-primary btn-lg btn-block"
+              [disabled]="buttonStatus"
+            >
+              Book Free Consultation
+            </button></a
+          >
+
+          <router-outlet></router-outlet>
         </form>
         <!-- Forms End Here -->
       </div>
