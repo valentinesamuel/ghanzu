@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
   CanActivate,
-  CanDeactivate,
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
   UrlTree,
@@ -12,7 +11,7 @@ import { SetAppointmentService } from './set-appointment.service';
 @Injectable({
   providedIn: 'root',
 })
-export class AppointmentGuard implements CanActivate, CanDeactivate<unknown> {
+export class AppointmentGuard implements CanActivate {
   constructor(private appointmentService: SetAppointmentService) {}
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -28,21 +27,8 @@ export class AppointmentGuard implements CanActivate, CanDeactivate<unknown> {
         if (appointmentSet) {
           return true;
         } else {
-          alert('Sorry sir, you have to login first');
+          alert('Sorry, you have to login first');
         }
       });
-  }
-
-  canDeactivate(
-    component: unknown,
-    currentRoute: ActivatedRouteSnapshot,
-    currentState: RouterStateSnapshot,
-    nextState?: RouterStateSnapshot
-  ):
-    | Observable<boolean | UrlTree>
-    | Promise<boolean | UrlTree>
-    | boolean
-    | UrlTree {
-    return true;
   }
 }
