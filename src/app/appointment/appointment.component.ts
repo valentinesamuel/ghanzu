@@ -26,4 +26,5 @@ export class AppointmentComponent implements OnInit {
       };
     });
   }
+  //sett
 }
