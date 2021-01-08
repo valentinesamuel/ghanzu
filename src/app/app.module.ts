@@ -21,6 +21,7 @@ const appRoutes: Routes = [
     path: 'appointment/:email/:password/:dept/:time',
     component: AppointmentComponent,
     canActivate: [AppointmentGuard],
+    canDeactivate: [DeactivateAppointmentGuard],
   },
 ];
 
