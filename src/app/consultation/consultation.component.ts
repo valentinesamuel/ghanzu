@@ -52,8 +52,6 @@ export class ConsultationComponent implements OnInit {
   onLogIn() {
     this.appointmentService.LogIn();
   }
-
-
 }
 
 //  Setup  routes
