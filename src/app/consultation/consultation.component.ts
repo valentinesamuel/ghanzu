@@ -29,7 +29,6 @@ export class ConsultationComponent implements OnInit {
   }
 
   submitter() {
-    console.log('data has left consultation component');
 
     this.router.navigate(
       [
@@ -54,6 +53,3 @@ export class ConsultationComponent implements OnInit {
   }
 }
 
-//  Setup  routes
-// ? Create wildCard routes
-//
