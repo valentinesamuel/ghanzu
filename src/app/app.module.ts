@@ -14,10 +14,15 @@ import { FooterComponent } from './footer/footer.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AppointmentGuard } from './appointment.guard';
+import { DeactivateAppointmentGuard } from './shared/deactivate-appointment-guard.service';
 
 const appRoutes: Routes = [
-{path:"appointment/:email/:password/:dept/:time", component: AppointmentComponent, canActivate:[AppointmentGuard]},
-]
+  {
+    path: 'appointment/:email/:password/:dept/:time',
+    component: AppointmentComponent,
+    canActivate: [AppointmentGuard],
+  },
+];
 
 @NgModule({
   declarations: [
@@ -28,7 +33,6 @@ const appRoutes: Routes = [
     ConsultationComponent,
     FooterComponent,
     AppointmentComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
   ],
   exports: [MatIconModule, RouterModule],
-  providers: [],
+  providers: [DeactivateAppointmentGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
