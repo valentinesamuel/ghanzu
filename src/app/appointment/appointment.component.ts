@@ -37,7 +37,6 @@ export class AppointmentComponent implements OnInit, IDeactivateGuard {
   }
   //sett
   canLeave() {
-    console.log(this.copiedAppointmentDetails);
     if (confirm('Are you sure you want to go back?')) {
       if (confirm('All unsaved changes will be lost')) {
         return true;

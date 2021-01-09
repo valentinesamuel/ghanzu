@@ -21,7 +21,11 @@ const appRoutes: Routes = [
     path: 'appointment/:email/:password/:dept/:time',
     component: AppointmentComponent,
     canActivate: [AppointmentGuard],
+    canDeactivate: [DeactivateAppointmentGuard],
   },
+
+  { path: 'erv', component: FooterComponent },
+  { path: '**', redirectTo: 'aieonf' },
 ];
 
 @NgModule({
