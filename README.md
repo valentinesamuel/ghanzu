@@ -22,3 +22,13 @@ The home page contains the basic details of the company. These include:
  * Showcase Cover
  * Testimonial Section
  * Footer
+
+## Additional Challenges
+
+Styling the forms has been very difficult because i had recently started learning flex.
+
+## Final thoughts
+
+This project was not easy at all s. 
+
+> *"If four things are followed - having a great aim, acquiring knowledge, hard work, and perseverance - then anything can be achieved."* - ***A.P.J Abdul Kalam***
