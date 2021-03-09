@@ -10,3 +10,15 @@ This allowed me to see where my strengths where and which sections i meeded to w
 
 ## Basic Structure
 1. Home Page
+
+## Maintained Pages
+1. Home Page
+
+The home page contains the basic details of the company. These include:
+ * About
+ * Company Mission
+ * Company vision
+ * Newsletter subscription section
+ * Showcase Cover
+ * Testimonial Section
+ * Footer
