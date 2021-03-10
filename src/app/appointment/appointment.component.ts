@@ -16,7 +16,7 @@ export class AppointmentComponent implements OnInit {
   };
 
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
@@ -26,17 +26,12 @@ export class AppointmentComponent implements OnInit {
         department: params['dept'],
         time: params['time'],
       };
-      
+
     });
   }
-  //sett
-  canLeave() {
-    if (confirm('Are you sure you want to go back?')) {
-      if (confirm('All unsaved changes will be lost')) {
-        return true;
-      }
-    } else {
-      return false;
-    }
+
+  BookNow() {
+    console.log(this.appointmentDetails);
+
   }
 }
