@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SetAppointmentService } from '../set-appointment.service';
 
 @Component({
   selector: 'app-consultation',
@@ -9,14 +8,14 @@ import { SetAppointmentService } from '../set-appointment.service';
 })
 export class ConsultationComponent implements OnInit {
   clientEmail = '';
-  clientPassword = '';
+  clientPurpose = '';
   clientDepartment = '';
   clientTime = '';
   buttonStatus = false;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private appointmentService: SetAppointmentService
+    
   ) {}
 
   ngOnInit(): void {}
@@ -34,7 +33,7 @@ export class ConsultationComponent implements OnInit {
       [
         'appointment',
         this.clientEmail,
-        this.clientPassword,
+        this.clientPurpose,
         this.clientDepartment,
         this.clientTime,
       ],
@@ -44,12 +43,6 @@ export class ConsultationComponent implements OnInit {
     );
   }
 
-  onLogout() {
-    this.appointmentService.LogOut();
-  }
-
-  onLogIn() {
-    this.appointmentService.LogIn();
-  }
+  
 }
 

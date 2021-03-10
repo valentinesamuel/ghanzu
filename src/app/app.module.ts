@@ -13,17 +13,14 @@ import { ConsultationComponent } from './consultation/consultation.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { Routes, RouterModule } from '@angular/router';
-import { AppointmentGuard } from './appointment.guard';
-import { DeactivateAppointmentGuard } from './shared/deactivate-appointment-guard.service';
+
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   {
-    path: 'appointment/:email/:password/:dept/:time',
+    path: 'appointment/:email/:purpose/:dept/:time',
     component: AppointmentComponent,
-    canActivate: [AppointmentGuard],
-    canDeactivate: [DeactivateAppointmentGuard],
   },
-
   { path: 'erv', component: FooterComponent },
   { path: '**', redirectTo: 'aieonf' },
 ];
@@ -43,11 +40,12 @@ const appRoutes: Routes = [
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
+    HttpClientModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
   ],
   exports: [MatIconModule, RouterModule],
-  providers: [DeactivateAppointmentGuard],
+  providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
