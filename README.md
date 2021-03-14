@@ -31,4 +31,4 @@ Styling the forms has been very difficult because i had recently started learnin
 
 This project was not easy at all s. 
 
-> *"If four things are followed - having a great aim, acquiring knowledge, hard work, and perseverance - then anything can be achieved."* - ***A.P.J Abdul Kalam***
+> *"If you really look closely, most overnight successes took a long time."* - ***Steve Jobs***
