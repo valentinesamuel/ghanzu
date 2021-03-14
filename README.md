@@ -10,25 +10,27 @@ This allowed me to see where my strengths where and which sections i meeded to w
 
 ## Basic Structure
 1. Home Page
+2. User-Card Page
 
-## Maintained Pages
-1. Home Page
 
 The home page contains the basic details of the company. These include:
- * About
- * Company Mission
- * Company vision
- * Newsletter subscription section
- * Showcase Cover
- * Testimonial Section
- * Footer
+ * The Github username of the user
+ * The search field
+
+
+The user-card page contains the information about the queried username. These include:
+ * The username 
+ * The location
+ * The repositories
+ * The hireable status
+ * The profile picture
 
 ## Additional Challenges
 
-Styling the forms has been very difficult because i had recently started learning flex.
+Manipulating the DOM with javascript is a bit tedious work.
 
 ## Final thoughts
 
-This project was not easy at all s. 
+This project was not easy but i am determined to finish this project. 
 
 > *"If you really look closely, most overnight successes took a long time."* - ***Steve Jobs***
