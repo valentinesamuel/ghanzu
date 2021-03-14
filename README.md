@@ -1,7 +1,7 @@
 # Ghanzu
 
 ## Project Purpose
-This project was made to test my knowledge on the basic structure and functionality of a website built with angular in html and css and TS. It serves as my first full length project started from scratch in angular. Since this project was a test of my knowledge, i used as little help resources as i could with the exception of debugging some css features such as the broken navbar, and assistance with flexbox. 
+This project was made to test my knowledge on the basic structure and functionality of a website built with Angular in html and css and TS. It serves as my first full length project started from scratch in angular. Since this project was a test of my knowledge, i used as little help resources as i could with the exception of debugging some css features such as the broken navbar, and assistance with flexbox. 
 
 This allowed me to see where my strengths where and which sections i meeded to work on.
 
@@ -10,27 +10,25 @@ This allowed me to see where my strengths where and which sections i meeded to w
 
 ## Basic Structure
 1. Home Page
-2. User-Card Page
+
 
 
 The home page contains the basic details of the company. These include:
- * The Github username of the user
- * The search field
+ * Achievements
+ * Services offered
+ * About us
+ * Testimonials
+ * Attorneys
+ * Appointment Booking
+ * Footer
 
-
-The user-card page contains the information about the queried username. These include:
- * The username 
- * The location
- * The repositories
- * The hireable status
- * The profile picture
 
 ## Additional Challenges
 
-Manipulating the DOM with javascript is a bit tedious work.
+Managing development and publishing is not an easy task.
 
 ## Final thoughts
 
-This project was not easy but i am determined to finish this project. 
+From this project, i have learnt that no website or application has an ending. It needs constant maintenance. 
 
-> *"If you really look closely, most overnight successes took a long time."* - ***Steve Jobs***
+> *"The only limit to our realization of tomorrow will be our doubts of today."* - ***Franklin D. Roosevelt***
