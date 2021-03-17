@@ -11,8 +11,6 @@ This allowed me to see where my strengths where and which sections i meeded to w
 ## Basic Structure
 1. Home Page
 
-
-
 The home page contains the basic details of the company. These include:
  * Achievements
  * Services offered
@@ -22,6 +20,11 @@ The home page contains the basic details of the company. These include:
  * Appointment Booking
  * Footer
 
+## Website URL
+* Ghanzu.netlify.app
+
+
+Managing development and publishing is not an easy task.
 
 ## Additional Challenges
 
