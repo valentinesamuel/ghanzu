@@ -18,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   {
-    path: 'appointment/:email/:purpose/:dept/:time',
+    path: 'appointment',
     component: AppointmentComponent,
   },
   { path: 'erv', component: FooterComponent },
