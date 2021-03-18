@@ -15,14 +15,19 @@ import { AppointmentComponent } from './appointment/appointment.component';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
+import { BookingsComponent } from './bookings/bookings.component';
 
 const appRoutes: Routes = [
   {
-    path: 'appointment',
+    path: 'appointment/:email/:purpose/:dept/:time',
     component: AppointmentComponent,
   },
-  { path: 'erv', component: FooterComponent },
-  { path: '**', redirectTo: 'aieonf' },
+  {
+    path: 'footer', component: FooterComponent
+  },
+  { path: 'bookings', component: BookingsComponent },
+
+  { path: '**', redirectTo: '/' },
 ];
 
 @NgModule({
@@ -34,6 +39,7 @@ const appRoutes: Routes = [
     ConsultationComponent,
     FooterComponent,
     AppointmentComponent,
+    BookingsComponent,
   ],
   imports: [
     BrowserModule,

@@ -20,7 +20,7 @@ export class ConsultationComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private appointmentService: AppointmentsService
+
 
   ) { }
 
@@ -42,19 +42,24 @@ export class ConsultationComponent implements OnInit {
     }
 
     this.router.navigate(
-      ['appointment',], { relativeTo: this.route }
-    );
+      [
+        'appointment',
+        this.client.clientEmail,
+        this.client.clientPurpose,
+        this.client.clientDepartment,
+        this.client.clientTime,
+      ],
+      {
+        relativeTo: this.route,
+      });
 
-    this.appointmentService.makeAppointment(this.client.clientEmail, this.client.clientPurpose, this.client.clientEmail, this.client.clientTime).subscribe(responseData => {
-      console.log(responseData);
-    }, error => { console.log(error); }
-    );
 
-    this.appointmentService.getAppointment().subscribe(
-      response => {
-        console.log(response);
-      }
-    )
+
+    // this.appointmentService.getAppointment().subscribe(
+    //   response => {
+    //     console.log(response);
+    //   }
+    // )
 
 
 

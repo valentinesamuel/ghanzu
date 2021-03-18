@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TrialService } from './shared/trial.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +8,6 @@ import { TrialService } from './shared/trial.service';
 export class AppComponent implements OnInit {
   title = 'ghanzu';
 
-  constructor(private trialService: TrialService) {}
-
   ngOnInit() {}
+
 }
