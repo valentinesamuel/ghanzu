@@ -3,13 +3,8 @@
 ## Project Purpose
 This project was made to test my knowledge on the basic structure and functionality of a website built with Angular in html and css and TS. It serves as my first full length project started from scratch in angular. I have also integrated firebase in place of BaaS. With firebase's realtime database, i was able to use the API to send the client's booking data to the database. 
 
-This allowed me to see where my strengths where and which sections i meeded to work on.
-
 ## Contributors
 - Samuel Valentine
-
-## Basic Structure
-1. Home Page
 
 The home page contains the basic details of the company. These include:
  * Achievements
